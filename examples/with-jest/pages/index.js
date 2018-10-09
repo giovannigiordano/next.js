@@ -1,10 +1,11 @@
+import dynamic from 'next/dynamic'
+
+const DynamicA = dynamic(() => import('../components/A'))
+
 export default () => (
   <div>
-    <style jsx>{`
-      p {
-        color: red;
-      }
-    `}</style>
     <p>Hello World!</p>
+
+    <DynamicA />
   </div>
 )
